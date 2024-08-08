@@ -12,11 +12,7 @@ const getWalletDetails = async (
     await window.ethereum.request({
       method: "eth_requestAccounts",
     });
-  } catch (e) {
-    alert("Login to MetaMask");
-  }
 
-  try {
     const provider = new ethers.providers.Web3Provider(
       window.ethereum
     );
@@ -24,8 +20,7 @@ const getWalletDetails = async (
     const signer = provider.getSigner();
     const address = await signer.getAddress();
 
-    let contractAddress =
-      "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    let contractAddress = `${process.env.REACT_APP_CONTRACT_ADDRESS}`;
 
     const contract = new ethers.Contract(
       contractAddress,

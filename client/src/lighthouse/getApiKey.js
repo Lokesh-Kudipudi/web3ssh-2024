@@ -15,9 +15,8 @@ const signAuthMessage = async (
 
 const getApiKey = async () => {
   const wallet = {
-    publicKey: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
-    privateKey:
-      "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+    publicKey: `${process.env.REACT_APP_PUBLIC_KEY}`,
+    privateKey: `${process.env.REACT_APP_PRIVATE_KEY}`,
   };
   const verificationMessage = (
     await axios.get(

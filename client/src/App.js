@@ -39,8 +39,6 @@ function App() {
     if (!account) setImagesData(null);
   }, [account]);
 
-  console.log(process.env.REACT_APP_CONTRACT_ADDRESS);
-
   async function connectWallet() {
     if (window.ethereum !== undefined) {
       try {

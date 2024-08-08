@@ -20,8 +20,9 @@ async function uploadFile(
   toast.loading("Initiating Transaction", { id: toastId });
 
   const url = `https://gateway.lighthouse.storage/ipfs/${output.data.Hash}`;
+
   try {
-    await contract.add(account, url, {
+    await contract.addImageUrl(account, url, {
       maxFeePerGas: maxFeePerGas,
       maxPriorityFeePerGas: maxPriorityFeePerGas,
     });
