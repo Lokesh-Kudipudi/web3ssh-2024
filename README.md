@@ -1,15 +1,19 @@
 # web3ssh-2024
 
-## Decentralised File upload and Sharing
+## Problem Statement
 
-This Project allows the users to upload their files into the blockchain and share those files to other users
+There is a growing need for a more reliable, secure, and cost-efficient storage solution that can ensure the integrity and availability of data over long periods.
+
+## Solution - Decentralised File upload and Sharing for Long Term
+
+This Project allows the users to upload their files into the blockchain and share those files to other users for long term purpose
 
 ## Tech Stack
 
 - ReactJs
 - EthersJs
 - Solidity
-- Pinata for file Upload
+- Web3.storage
 
 ## Presentation
 
