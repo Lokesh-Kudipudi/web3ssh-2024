@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./App.module.css"; // Import CSS module
+import styles from "./App.module.css";
 import getApiKey from "./lighthouse/getApiKey";
 import uploadFile from "./lighthouse/uploadFile";
 import getWalletDetails from "./untils/getWalletDetails";
@@ -27,26 +27,19 @@ function App() {
     const value = localStorage.getItem("apiKey");
     if (value) {
       setApiKey(value);
+    } else {
+      const getApiDetails = async () => {
+        await getApiKeyClient();
+      };
+      getApiDetails();
     }
-
-    const walletDetails = async () => {
-      await getWalletDetails(
-        setContract,
-        setProvider,
-        setAccount,
-        setMaxFeePerGas,
-        setMaxPriorityFeePerGas
-      );
-
-      await getApiKeyClient();
-    };
-
-    window.ethereum !== undefined && walletDetails();
   }, []);
 
   useEffect(() => {
     if (!account) setImagesData(null);
   }, [account]);
+
+  console.log(process.env.REACT_APP_CONTRACT_ADDRESS);
 
   async function connectWallet() {
     if (window.ethereum !== undefined) {
