@@ -1,0 +1,103 @@
+body {
+  background-image: url("../public/bg.jpg");
+  background-size: cover;
+  backdrop-filter: blur(12px);
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.fileUpload {
+  position: relative;
+  display: inline-block;
+}
+
+.fileUpload label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fileUpload label:hover {
+  background-color: #0056b3;
+}
+
+.fileUpload input[type="file"] {
+  display: none;
+}
+
+.right-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header button {
+  background-color: #91bbe730;
+  border-radius: 0.35rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  margin: 0 0.75rem;
+}
+
+.header button:hover {
+  background-color: #c4d4e58c;
+}
+
+.header div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #007bff;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.line {
+  height: 0.08rem;
+  background-color: black;
+  border: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0%;
+}
+
+.containerImageStyle img {
+  height: 30rem;
+  width: 40rem;
+}

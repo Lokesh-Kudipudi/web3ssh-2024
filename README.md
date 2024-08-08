@@ -13,7 +13,7 @@ This Project allows the users to upload their files into the blockchain and shar
 - ReactJs
 - EthersJs
 - Solidity
-- Web3.storage
+- LightHouse
 
 ## Presentation
 
