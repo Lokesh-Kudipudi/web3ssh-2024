@@ -29,7 +29,6 @@ const getWalletDetails = async (
     );
 
     const blockNumber = await provider.getBlockNumber();
-    console.log(blockNumber);
     const block = await provider.getBlock(blockNumber);
     const baseFeePerGas = block.baseFeePerGas;
     const maxPriorityFeePerGas = ethers.utils.parseUnits(
